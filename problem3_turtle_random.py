@@ -21,14 +21,19 @@ def carre(taille, couleur, x, y):
 # fonction pour cercle
 def cercle(taille, couleur, x, y):
     turtle.penup()
-    turtle.goto(x, y - taille)  # Ajuster la position pour que le cercle soit centré
+    # ajust la poisition
+    turtle.goto(x, y - taille)  
+    
     turtle.pendown()
+    # choix de la couelurs
     turtle.color(couleur)
+    # taille
     turtle.circle(taille)
     
 # function pour triangle
 def triangle(taille, couleur, x, y):
     turtle.penup()
+    # positon
     turtle.goto(x, y)
     turtle.pendown()
     turtle.color(couleur)
@@ -38,14 +43,20 @@ def triangle(taille, couleur, x, y):
 
 # des choix aleratoire et dessi les formes
 for i in range(N):
+    #coix de la forme
     form = random.choice(formes)
+    # choix de la tail
     taille = random.randint(10, 400)
+    # choix de la couelur
     couleur = random.choice(couleurs)
+    # choix des coordonne 
     x = random.randint(-400, 400)
     y = random.randint(-400, 400)
+    
     if form == "carre":
         carre(taille, couleur, x, y)
     if form == "cercle":
         cercle(taille, couleur, x, y)
     if form == "triangle":
         triangle(taille, couleur, x, y)
+
